@@ -292,7 +292,7 @@
 				'aboutus',
 				'softwareinfo',
 				'timothyjaeryangbaek',
-				'openwebui',
+				'myaiplatform',
 				'release',
 				'updates',
 				'updateinfo',
