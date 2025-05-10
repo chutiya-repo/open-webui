@@ -1,8 +1,8 @@
 [project]
-name = "open-webui"
-description = "Open WebUI"
+name = "myaiplatform"
+description = "MyAIPlatform"
 authors = [
-    { name = "Timothy Jaeryang Baek", email = "tim@openwebui.com" }
+    { name = "Timothy Jaeryang Baek", email = "tim@myaiplatform.com" }
 ]
 license = { file = "LICENSE" }
 dependencies = [
@@ -146,7 +146,7 @@ classifiers = [
 ]
 
 [project.scripts]
-open-webui = "open_webui:app"
+myaiplatform = "open_webui:app"
 
 [build-system]
 requires = ["hatchling"]
