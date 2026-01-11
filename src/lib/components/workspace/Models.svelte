@@ -11,8 +11,8 @@
 	import { goto } from '$app/navigation';
 	const i18n = getContext('i18n');
 
-	import { WEBUI_NAME, config, mobile, models as _models, settings, user } from '$lib/stores';
-	import { WEBUI_API_BASE_URL, WEBUI_BASE_URL } from '$lib/constants';
+	import { ANSWERAI_NAME, config, mobile, models as _models, settings, user } from '$lib/stores';
+	import { ANSWERAI_API_BASE_URL, ANSWERAI_BASE_URL } from '$lib/constants';
 	import {
 		createNewModel,
 		deleteModelById,
@@ -145,9 +145,9 @@
 	};
 
 	const shareModelHandler = async (model) => {
-		toast.success($i18n.t('Redirecting you to Open WebUI Community'));
+		toast.success($i18n.t('Redirecting you to ANSWERAI Community'));
 
-		const url = 'https://openwebui.com';
+		const url = 'https://answerai.in';
 
 		const tab = await window.open(`${url}/models/create`, '_blank');
 
@@ -269,7 +269,7 @@
 
 <svelte:head>
 	<title>
-		{$i18n.t('Models')} • {$WEBUI_NAME}
+		{$i18n.t('Models')} • {$ANSWERAI_NAME}
 	</title>
 </svelte:head>
 
@@ -477,7 +477,7 @@
 												: 'opacity-50 dark:opacity-50'} bg-transparent rounded-2xl"
 										>
 											<img
-												src={`${WEBUI_API_BASE_URL}/models/model/profile/image?id=${model.id}&lang=${$i18n.language}`}
+												src={`${ANSWERAI_API_BASE_URL}/models/model/profile/image?id=${model.id}&lang=${$i18n.language}`}
 												alt="modelfile profile"
 												class=" rounded-2xl size-12 object-cover"
 											/>
@@ -679,12 +679,12 @@
 	{#if $config?.features.enable_community_sharing}
 		<div class=" my-16">
 			<div class=" text-xl font-medium mb-1 line-clamp-1">
-				{$i18n.t('Made by Open WebUI Community')}
+				{$i18n.t('Made by ANSWERAI Community')}
 			</div>
 
 			<a
 				class=" flex cursor-pointer items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-850 w-full mb-2 px-3.5 py-1.5 rounded-xl transition"
-				href="https://openwebui.com/models"
+				href="https://answerai.in/models"
 				target="_blank"
 			>
 				<div class=" self-center">

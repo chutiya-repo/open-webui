@@ -20,7 +20,7 @@
 		currentChatPage
 	} from '$lib/stores';
 	import { sanitizeResponseContent, extractCurlyBraceWords } from '$lib/utils';
-	import { WEBUI_API_BASE_URL, WEBUI_BASE_URL } from '$lib/constants';
+	import { ANSWERAI_API_BASE_URL, ANSWERAI_BASE_URL } from '$lib/constants';
 
 	import Suggestions from './Suggestions.svelte';
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
@@ -122,7 +122,7 @@
 										}}
 									>
 										<img
-											src={`${WEBUI_API_BASE_URL}/models/model/profile/image?id=${model?.id}&lang=${$i18n.language}`}
+											src={`${ANSWERAI_API_BASE_URL}/models/model/profile/image?id=${model?.id}&lang=${$i18n.language}`}
 											class=" size-9 @sm:size-10 rounded-full border-[1px] border-gray-100 dark:border-none"
 											aria-hidden="true"
 											draggable="false"
@@ -181,7 +181,7 @@
 									By
 									{#if models[selectedModelIdx]?.info?.meta?.user.community}
 										<a
-											href="https://openwebui.com/m/{models[selectedModelIdx]?.info?.meta?.user
+											href="https://answerai.in/m/{models[selectedModelIdx]?.info?.meta?.user
 												.username}"
 											>{models[selectedModelIdx]?.info?.meta?.user.name
 												? models[selectedModelIdx]?.info?.meta?.user.name

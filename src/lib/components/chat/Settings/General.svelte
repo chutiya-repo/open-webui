@@ -193,7 +193,7 @@
 <div class="flex flex-col h-full justify-between text-sm" id="tab-general">
 	<div class="  overflow-y-scroll max-h-[28rem] md:max-h-full">
 		<div class="">
-			<div class=" mb-1 text-sm font-medium">{$i18n.t('WebUI Settings')}</div>
+			<div class=" mb-1 text-sm font-medium">{$i18n.t('ANSWERAI Settings')}</div>
 
 			<div class="flex w-full justify-between">
 				<div class=" self-center text-xs font-medium">{$i18n.t('Theme')}</div>
@@ -247,10 +247,10 @@
 						class="font-medium underline {($settings?.highContrastMode ?? false)
 							? 'text-gray-700 dark:text-gray-200'
 							: 'text-gray-300'}"
-						href="https://github.com/open-webui/open-webui/blob/main/docs/CONTRIBUTING.md#-translations-and-internationalization"
+						href="https://github.com/answerai/answerai/blob/main/docs/CONTRIBUTING.md#-translations-and-internationalization"
 						target="_blank"
 					>
-						Help us translate Open WebUI!
+						Help us translate ANSWERAI!
 					</a>
 				</div>
 			{/if}
