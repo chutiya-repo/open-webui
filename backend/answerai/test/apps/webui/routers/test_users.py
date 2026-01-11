@@ -1,5 +1,5 @@
-from test.util.abstract_integration_test import AbstractPostgresTest
-from test.util.mock_user import mock_answerai_user
+from answerai.test.util.abstract_integration_test import AbstractPostgresTest
+from answerai.test.util.mock_user import mock_answerai_user
 
 
 def _get_user_by_id(data, param):

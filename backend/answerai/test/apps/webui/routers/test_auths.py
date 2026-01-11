@@ -1,5 +1,5 @@
-from test.util.abstract_integration_test import AbstractPostgresTest
-from test.util.mock_user import mock_answerai_user
+from answerai.test.util.abstract_integration_test import AbstractPostgresTest
+from answerai.test.util.mock_user import mock_answerai_user
 
 
 class TestAuths(AbstractPostgresTest):
@@ -64,13 +64,9 @@ class TestAuths(AbstractPostgresTest):
             )
         assert response.status_code == 200
 
-        old_auth = self.auths.authenticate_user(
-            "john.doe@answerai.in", "old_password"
-        )
+        old_auth = self.auths.authenticate_user("john.doe@answerai.in", "old_password")
         assert old_auth is None
-        new_auth = self.auths.authenticate_user(
-            "john.doe@answerai.in", "new_password"
-        )
+        new_auth = self.auths.authenticate_user("john.doe@answerai.in", "new_password")
         assert new_auth is not None
 
     def test_signin(self):

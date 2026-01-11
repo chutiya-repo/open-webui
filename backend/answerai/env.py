@@ -10,6 +10,7 @@ from pathlib import Path
 from cryptography.hazmat.primitives import serialization
 import re
 
+
 def get_env(key, default=None):
     return os.environ.get(f"ANSWERAI_{key}", os.environ.get(f"WEBUI_{key}", default))
 
@@ -473,9 +474,14 @@ ANSWERAI_SESSION_COOKIE_SECURE = (
     get_env("SESSION_COOKIE_SECURE", "false").lower() == "true"
 )
 
-ANSWERAI_AUTH_COOKIE_SAME_SITE = get_env("AUTH_COOKIE_SAME_SITE", ANSWERAI_SESSION_COOKIE_SAME_SITE)
+ANSWERAI_AUTH_COOKIE_SAME_SITE = get_env(
+    "AUTH_COOKIE_SAME_SITE", ANSWERAI_SESSION_COOKIE_SAME_SITE
+)
 
-ANSWERAI_AUTH_COOKIE_SECURE = get_env("AUTH_COOKIE_SECURE", get_env("SESSION_COOKIE_SECURE", "false")).lower() == "true"
+ANSWERAI_AUTH_COOKIE_SECURE = (
+    get_env("AUTH_COOKIE_SECURE", get_env("SESSION_COOKIE_SECURE", "false")).lower()
+    == "true"
+)
 
 if ANSWERAI_AUTH and ANSWERAI_SECRET_KEY == "":
     raise ValueError(ERROR_MESSAGES.ENV_VAR_NOT_FOUND)

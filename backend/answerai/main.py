@@ -595,7 +595,9 @@ async def lifespan(app: FastAPI):
 
     # Create admin account from env vars if specified and no users exist
     if ANSWERAI_ADMIN_EMAIL and ANSWERAI_ADMIN_PASSWORD:
-        if create_admin_user(ANSWERAI_ADMIN_EMAIL, ANSWERAI_ADMIN_PASSWORD, ANSWERAI_ADMIN_NAME):
+        if create_admin_user(
+            ANSWERAI_ADMIN_EMAIL, ANSWERAI_ADMIN_PASSWORD, ANSWERAI_ADMIN_NAME
+        ):
             # Disable signup since we now have an admin
             app.state.config.ENABLE_SIGNUP = False
 
